@@ -1,3 +1,5 @@
+/** @format */
+
 import { useCallback } from "react";
 import "./styles.css";
 import { isString, convertPxToNumber } from "./utils";
@@ -8,11 +10,11 @@ export type PreloaderProps = {
   color?: string | string[];
 };
 
-const Preloader: React.FC<PreloaderProps> = ({
+export const Preloader: React.FC<PreloaderProps> = ({
   variant,
   label,
   size,
-  color
+  color,
 }) => {
   const isArray = useCallback(() => {
     if (Array.isArray(color)) return true;
@@ -27,14 +29,14 @@ const Preloader: React.FC<PreloaderProps> = ({
             width: isString(size),
             height: isString(size),
             borderWidth: size ? (convertPxToNumber(size) / 100) * 5 : 5,
-            borderTopColor: isArray() ? (color?.[0] as any) : color
+            borderTopColor: isArray() ? (color?.[0] as any) : color,
           }}
           className={variant as string}
         >
           <div
             style={{
               borderWidth: size ? (convertPxToNumber(size) / 100) * 5 : 5,
-              borderTopColor: isArray() ? (color?.[1] as any) : color
+              borderTopColor: isArray() ? (color?.[1] as any) : color,
             }}
             className={`${variant}Absloute`}
           ></div>
@@ -52,6 +54,5 @@ Preloader.defaultProps = {
   size: 300,
   label: "LOADING ....",
   variant: "circle",
-  color: ["#eee", "#eee"]
+  color: ["#eee", "#eee"],
 };
-export default Preloader;
