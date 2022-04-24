@@ -2,13 +2,8 @@
 
 import { useCallback } from "react";
 import "./styles.css";
+import { PreloaderProps } from "./types";
 import { isString, convertPxToNumber } from "./utils";
-export type PreloaderProps = {
-  variant?: "circle";
-  label?: string | null;
-  size?: number | string;
-  color?: string | string[];
-};
 
 export const Preloader: React.FC<PreloaderProps> = ({
   variant,
