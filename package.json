@@ -1,6 +1,6 @@
 {
   "name": "react-simple-preloader",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "simple react preloader with typeScrypt",
   "main": "lib/index",
   "types": "src/index",
@@ -8,8 +8,9 @@
   "author": "Mahmoud okily",
   "license": "ISC",
   "scripts": {
-    "build": "tsc",
-    "prepare": "tsc",
+    "clean": "rimraf lib/",
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css lib/",
+    "build": "npm run clean && tsc && npm run copy-files",
     "publish": "npm publish"
   },
   "dependencies": {
@@ -19,11 +20,13 @@
     "typescript": "4.6.3"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "grunt": "~0.4.5",
     "grunt-bump": "^0.8.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-uglify": "~0.5.0",
+    "rimraf": "^3.0.2",
     "typescript": "4.4.4",
     "typescript-plugin-css-modules": "^3.4.0"
   },

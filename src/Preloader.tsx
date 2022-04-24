@@ -12,6 +12,7 @@ const Preloader: React.FC<PreloaderProps> = ({
   color,
 }) => {
   const isArray = useCallback(() => {
+    if (!color) return;
     if (Array.isArray(color)) return true;
     return false;
   }, [color]);
