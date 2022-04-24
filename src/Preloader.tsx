@@ -13,7 +13,7 @@ const Preloader: React.FC<PreloaderProps> = ({
 }) => {
   const isArray = useCallback(() => {
     if (!color) return;
-    if (Array.isArray(color)) return true;
+    if (Array?.isArray(color)) return true;
     return false;
   }, [color]);
 
@@ -25,14 +25,14 @@ const Preloader: React.FC<PreloaderProps> = ({
             width: isString(size),
             height: isString(size),
             borderWidth: size ? (convertPxToNumber(size) / 100) * 5 : 5,
-            borderTopColor: isArray() ? (color?.[0] as any) : color,
+            borderTopColor: isArray?.() ? (color?.[0] as any) : color,
           }}
           className={variant as string}
         >
           <div
             style={{
               borderWidth: size ? (convertPxToNumber(size) / 100) * 5 : 5,
-              borderTopColor: isArray() ? (color?.[1] as any) : color,
+              borderTopColor: isArray?.() ? (color?.[1] as any) : color,
             }}
             className={`${variant}Absloute`}
           ></div>

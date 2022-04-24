@@ -1,6 +1,6 @@
 {
   "name": "react-simple-preloader",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "simple react preloader with typeScrypt",
   "main": "lib/index",
   "types": "src/index",
@@ -10,8 +10,7 @@
   "scripts": {
     "clean": "rimraf lib/",
     "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css lib/",
-    "build": "npm run clean && tsc && npm run copy-files",
-    "publish": "npm publish"
+    "publish": "npm run clean && tsc && npm run copy-files && npm publish"
   },
   "dependencies": {
     "@types/react": "18.0.6",
