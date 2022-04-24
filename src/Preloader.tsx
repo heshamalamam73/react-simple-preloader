@@ -25,14 +25,16 @@ const Preloader: React.FC<PreloaderProps> = ({
             width: isString(size),
             height: isString(size),
             borderWidth: size ? (convertPxToNumber(size) / 100) * 5 : 5,
-            borderTopColor: isArray?.() ? (color?.[0] as any) : color,
+            // borderTopColor: isArray?.() ? (color?.[0] as any) : color,
+            borderTopColor: color,
           }}
           className={variant as string}
         >
           <div
             style={{
               borderWidth: size ? (convertPxToNumber(size) / 100) * 5 : 5,
-              borderTopColor: isArray?.() ? (color?.[1] as any) : color,
+              // borderTopColor: isArray?.() ? (color?.[1] as any) : color,
+              borderTopColor: color,
             }}
             className={`${variant}Absloute`}
           ></div>
@@ -50,7 +52,7 @@ Preloader.defaultProps = {
   size: 300,
   label: "LOADING ....",
   variant: "circle",
-  color: ["#eee", "#eee"],
+  color: "#eee",
 };
 
 export default Preloader;
