@@ -1,6 +1,6 @@
 {
   "name": "react-simple-preloader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple react preloader with typeScrypt",
   "main": "lib/index",
   "types": "src/index",
@@ -9,7 +9,8 @@
   "license": "ISC",
   "scripts": {
     "build": "tsc",
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "publish": "npm publish"
   },
   "dependencies": {
     "@types/react": "18.0.6",
