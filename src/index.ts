@@ -1,7 +1,9 @@
 /** @format */
 
-import { Preloader } from "./Preloader";
+import Preloader from "./Preloader";
 
-export * from "./utils";
-export * from "./types";
+import { convertPxToNumber, isString } from "./utils";
+import { PreloaderProps } from "./types";
 export default Preloader;
+export type { PreloaderProps };
+export { isString, convertPxToNumber };

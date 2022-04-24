@@ -5,7 +5,7 @@ import "./styles.css";
 import { PreloaderProps } from "./types";
 import { isString, convertPxToNumber } from "./utils";
 
-export const Preloader: React.FC<PreloaderProps> = ({
+const Preloader: React.FC<PreloaderProps> = ({
   variant,
   label,
   size,
@@ -51,3 +51,5 @@ Preloader.defaultProps = {
   variant: "circle",
   color: ["#eee", "#eee"],
 };
+
+export default Preloader;
