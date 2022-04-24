@@ -11,11 +11,11 @@ const Preloader: React.FC<PreloaderProps> = ({
   size,
   color,
 }) => {
-  const isArray = useCallback(() => {
-    if (!color) return;
-    if (Array?.isArray(color)) return true;
-    return false;
-  }, [color]);
+  // const isArray = useCallback(() => {
+  //   if (!color) return;
+  //   if (Array?.isArray(color)) return true;
+  //   return false;
+  // }, [color]);
 
   const Element = useCallback(
     () => (
@@ -42,7 +42,7 @@ const Preloader: React.FC<PreloaderProps> = ({
         {label && <span className="label">{label}</span>}
       </>
     ),
-    [variant, label, size, color, isArray]
+    [variant, label, size, color]
   );
 
   return <Element />;
