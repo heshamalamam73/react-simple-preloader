@@ -1,14 +1,15 @@
 {
   "name": "react-simple-preloader",
   "version": "1.0.0",
-  "description": "JavaScript and TypeScript example starter project",
+  "description": "simple react preloader with typeScrypt",
   "main": "lib/index",
   "types": "src/index",
   "typings": "src/index",
   "author": "Mahmoud okily",
   "license": "ISC",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublish": "tsc"
   },
   "dependencies": {
     "@types/react": "18.0.6",
