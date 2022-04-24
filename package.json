@@ -1,0 +1,27 @@
+{
+  "name": "react-preloader",
+  "version": "1.0.0",
+  "description": "JavaScript and TypeScript example starter project",
+  "main": "lib/index",
+  "types": "src/index",
+  "typings": "src/index",
+  "author": "Mahmoud okily",
+  "license": "ISC",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@types/react": "18.0.6",
+    "parcel-bundler": "^1.6.1",
+    "react": "18.0.0",
+    "typescript": "4.6.3"
+  },
+  "devDependencies": {
+    "typescript": "4.4.4"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "keywords": ["preloader", "spinner", "loading", "react"]
+}

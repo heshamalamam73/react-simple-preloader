@@ -1,0 +1,20 @@
+{
+  "include": [
+    "./src/**/*"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "jsx": "react-jsx",
+    "target": "es5", /* Specify ECMAScript target version: */
+    "module": "commonjs", /* 'none', 'commonjs', 'amd', 'system', etc */
+    "declaration": true, /* Concatenate & emit output to single file.*/
+    "outDir": "lib", /* Redirect output to the directory. */
+    "skipLibCheck": true, /* Skip type checking of declaration files. */
+    "forceConsistentCasingInFileNames": true
+  }
+}
